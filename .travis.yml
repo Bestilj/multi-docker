@@ -14,10 +14,10 @@ after_success:
     - docker build -t admirhadzic/multi-nginx ./nginx
     - docker build -t admirhadzic/multi-server ./server
     - docker build -t admirhadzic/multi-worker ./worker
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker push admirhadzic/multi-client
-    - docker push admirhadzic/multi-nginx
-    - docker push admirhadzic/multi-server
-    - docker push admirhadzic/multi-worker
+    - sudo echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    - sudo docker push admirhadzic/multi-client
+    - sudo docker push admirhadzic/multi-nginx
+    - sudo docker push admirhadzic/multi-server
+    - sudo docker push admirhadzic/multi-worker
 
 
